@@ -42,6 +42,12 @@ content: ["./src/**/*.{js,jsx,ts,tsx}",]
 @tailwind components;
 @tailwind utilities;
 
+// import HelloWorld from './lib';
+
+// const App = () => {
+// return <HelloWorld greetee={'Universe'} />;
+// };
+
 ## Publish
 
 - npm run build
