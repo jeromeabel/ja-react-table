@@ -4,7 +4,7 @@ This project is the n°14 of the [OpenClassrooms Front-End learning path](https:
 
 ## ✨ Interface
 
-... in progres ...
+... in progress ...
 
 ## 🚨 Prerequisites
 
@@ -18,13 +18,13 @@ To get and build the project you will need to install :
 ## 🛠️ Installation
 
 ```sh
-$ pnpm install
+pnpm install
 ```
 
 ## 🚀 Usage
 
 ```sh
-$ pnpm run dev
+pnpm run dev
 ```
 
 And open the browser at this address : http://localhost:5173/

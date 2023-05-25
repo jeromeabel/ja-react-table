@@ -1,5 +1,5 @@
 export default function HelloWorld(props: { greetee?: string }) {
   const { greetee = 'World' } = props;
 
-  return <div>Hello, {greetee}!</div>;
+  return <div className="bg-green-500 text-2xl">Hello, {greetee}!</div>;
 }

@@ -10,8 +10,9 @@ describe('HelloWorld', () => {
   });
 
   test('The greetee prop works', () => {
-    const component = renderer.create(<HelloWorld greetee={'Universe'} />);
+    const component = renderer.create(<HelloWorld greetee={'Universel'} />);
     const tree = component.toJSON();
+    console.log('TREE', tree);
     expect(tree).toMatchSnapshot();
   });
 });

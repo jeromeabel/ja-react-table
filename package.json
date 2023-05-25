@@ -1,7 +1,7 @@
 {
   "name": "ja-react-table",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A React Table component",
   "author": "Jérôme Abel",
   "keywords": [
@@ -35,15 +35,18 @@
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
     "c8": "^7.13.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "jsdom": "^22.0.0",
+    "postcss": "^8.4.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
+    "tailwindcss": "^3.3.2",
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vitest": "^0.31.1"
