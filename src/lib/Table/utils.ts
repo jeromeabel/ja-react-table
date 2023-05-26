@@ -19,3 +19,17 @@ export const sortArrayByProperty = <T>(
   }
   return newData;
 };
+
+// Loop through each properties of the object T
+export const filterItemsBySearchTerm = <T extends Record<string, unknown>>(
+  items: T[],
+  searchTerm: string
+): T[] => {
+  return items.filter((item: T) =>
+    Object.values(item).some(
+      (value) =>
+        typeof value === 'string' &&
+        value.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
+};
