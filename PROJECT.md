@@ -48,6 +48,19 @@ content: ["./src/**/*.{js,jsx,ts,tsx}",]
 // return <HelloWorld greetee={'Universe'} />;
 // };
 
+Generic parent enfant {/_ ?? TItem ou non ?? _/}
+<TableHead headers={headers} onSort={handleSort} />
+
+sortKey : string ou keyof TItem
+
+RECORD : represents an object type whose keys are of a specific type and whose values are of another specific type
+It ensures that TItem is a subtype of Record<string, unknown>.
+
+why in this code, we extend the TItem just once ? Why we don't extend it in every occurence of TItem ?
+
+By extending TItem in the component definition (<TItem extends ItemRecord>),
+allows the type inference and usage of TItem to be consistent and predictable throughout the component's implementation.
+
 ## Publish
 
 - npm run build

@@ -1,25 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-import { HeaderType } from './types';
+import { HeaderType, SortOrderType } from './Table';
 import TableHeadCell from './TableHeadCell';
 
-type UserType = {
-  firstName: string;
-  lastName: string;
-  dateOfBirth: Date;
-};
-
-interface TableHeadProps {
+type TableHeadProps = {
   headers: HeaderType[];
-  // onSort: (key: string, sortOrder: 'asc' | 'desc') => void;
-  onSort: (sortKey: keyof UserType, sortOrder: 'asc' | 'desc') => void;
-}
+  onSort: (sortKey: string, sortOrder: SortOrderType) => void;
+};
 
 const TableHead = ({ headers, onSort }: TableHeadProps) => {
   const [sortKey, setSortKey] = useState<string>('');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  const [sortOrder, setSortOrder] = useState<SortOrderType>('asc');
 
-  const handleSort = (key: any) => {
+  const handleSort = (key: string) => {
     const newSortOrder =
       sortKey === key && sortOrder === 'asc' ? 'desc' : 'asc';
     setSortKey(key);
@@ -28,7 +21,7 @@ const TableHead = ({ headers, onSort }: TableHeadProps) => {
   };
 
   return (
-    <thead>
+    <thead className="border-b">
       <tr>
         {headers.map((header, index) => {
           const isActive = sortKey === header.name;
@@ -36,8 +29,8 @@ const TableHead = ({ headers, onSort }: TableHeadProps) => {
             <TableHeadCell
               key={index}
               name={header.name}
-              sortKey={sortKey}
               label={header.label}
+              sortKey={sortKey}
               sortOrder={sortOrder}
               isActive={isActive}
               onSort={handleSort}

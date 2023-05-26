@@ -1,7 +1,9 @@
+import { SortOrderType } from './Table';
+
 type TableHeadCellProps = {
   label: string;
   name: string;
-  sortOrder: 'asc' | 'desc';
+  sortOrder: SortOrderType;
   sortKey: string;
   isActive: boolean;
   onSort: (key: string) => void;
@@ -15,10 +17,6 @@ const TableHeadCell = ({
   onSort,
   isActive,
 }: TableHeadCellProps) => {
-  const handleClick = () => {
-    onSort(name);
-  };
-
   const renderSortIndicator = () => {
     if (sortKey === name && sortOrder === 'asc') {
       return '▲';
@@ -30,12 +28,12 @@ const TableHeadCell = ({
   };
 
   return (
-    <th className="px-2 py-4 font-semibold tracking-wide">
+    <th className="font-semibold tracking-wide">
       <button
         className={`hover:text-fuchsia-600 hover:cursor-pointer flex gap-2 items-center ${
           isActive ? ' text-fuchsia-600' : ''
         }`}
-        onClick={handleClick}
+        onClick={() => onSort(name)}
       >
         {label}
         {renderSortIndicator()}

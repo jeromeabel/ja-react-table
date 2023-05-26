@@ -39,9 +39,17 @@ const App = () => {
   return (
     <main className="container mx-auto my-8">
       <h1 className="text-3xl">Test React Table</h1>
-      <Table headers={headers} data={users} />
+      <Table<UserType> headers={headers} items={users} />
     </main>
   );
 };
 
 export default App;
+
+/*
+  Tableau - colonnes/lignes :
+  - Tri
+  - Search
+  - Pagination
+  
+  */
