@@ -12,7 +12,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: 'src/index.ts',
+      entry: './index.ts',
       name: 'ja-react-table',
       fileName: 'index',
       formats: ['es', 'cjs'],

@@ -17,20 +17,24 @@ pnpm install ja-react-table
 2 - use it in your React project.
 
 ```tsx
+// Import the component
 import { Table } from 'ja-react-table';
 
+// Import CSS
+import '../node_modules/ja-react-table/dist/style.css';
+
 // Some data
-export const headers = [
+const headers = [
   { name: 'firstName', label: 'First name' },
   { name: 'dateOfBirth', label: 'Date of birth' },
 ];
 
-export type UserType = {
+type UserType = {
   firstName: string;
   dateOfBirth: Date;
 };
 
-export const users = [
+const users = [
   {
     firstName: 'John',
     dateOfBirth: new Date('1980-01-01'),
@@ -43,15 +47,23 @@ export const users = [
     firstName: 'Peter',
     dateOfBirth: new Date('1977-01-24'),
   },
+  {
+    firstName: 'Sarah',
+    dateOfBirth: new Date('1992-08-15'),
+  },
+  {
+    firstName: 'Michael',
+    dateOfBirth: new Date('1988-06-05'),
+  },
 ];
 
-const App = () => {
+function App() {
   return (
-    <main>
+    <div className="container mx-auto">
       <Table<UserType> headers={headers} items={users} />
-    </main>
+    </div>
   );
-};
+}
 
 export default App;
 ```
@@ -73,6 +85,8 @@ pnpm install
 ```
 
 ## Tests
+
+![ja-react-table coverage](coverage.png)
 
 **Manual tests in the browser**
 

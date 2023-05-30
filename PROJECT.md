@@ -2,9 +2,14 @@
 
 ## Resources
 
+Publish with Vite - React, Typescript and Tailwindcss component to npm. Frontend Mastery
+https://www.youtube.com/watch?v=XKfeczZyEzc
+
 - https://tomsouthall.com/blog/publishing-react-component-using-vite
 - Vitest: https://gist.github.com/jeromeabel/895454fe49ac009bd4fd65991b1efeb2
   https://onderonur.netlify.app/blog/creating-a-typescript-library-with-vite/
+
+https://www.trongtomo.com/blog/create-and-publish-your-own-react-component-library-with-typescript-storybook-and-tailwind#step-1-initialize-project-using-tsdx
 
 ## Steps
 
@@ -36,7 +41,7 @@ pnpm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
 // tailwind.config.js
-content: ["./src/**/*.{js,jsx,ts,tsx}",]
+content: ["./src/**/*.{js,jsx,ts,tsx}",],
 
 /_ index.css _/
 @tailwind base;

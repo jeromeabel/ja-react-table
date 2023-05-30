@@ -1,21 +1,25 @@
 {
   "name": "ja-react-table",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A React Table component with sorting, searching, pagination, and error handling functionalities",
   "author": "Jérôme Abel",
-  "main": "./dist/ja-react-table.umd.cjs",
-  "module": "./dist/ja-react-table.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/ja-react-table.js",
-      "require": "./dist/ja-react-table.umd.cjs"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jeromeabel/ja-react-table.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "react",
@@ -29,20 +33,27 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build-tailwind": "npx tailwindcss -o ./dist/styles.css --minify",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest run",
     "watch": "vitest",
     "coverage": "vitest run --coverage"
   },
+  "peerDependencies": {},
   "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.2",
+    "postcss": "^8.4.23",
     "@testing-library/dom": "^9.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/node": "^20.2.5",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
     "@types/react-test-renderer": "^18.0.0",
     "@types/testing-library__jest-dom": "^5.14.6",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
@@ -56,12 +67,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "jsdom": "^22.0.0",
-    "postcss": "^8.4.23",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vite-plugin-dts": "^2.3.0",
     "vitest": "^0.31.1"
