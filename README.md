@@ -2,6 +2,15 @@
 
 This project is the n°14 of the [OpenClassrooms Front-End learning path](https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react).
 
+The goal is to create a React component and publish it as a NPM package.
+
+I've chose to build a React Table component written in TypeScript. It displays tabular data with sorting, searching, pagination, and error handling functionalities.
+
+```tsx
+// Basic usage
+<Table<ItemType> headers={headers} items={items} sortBy="dateOfBirth" />
+```
+
 ## ✨ Interface
 
 ![ja-react-table component](screen.png)
@@ -20,7 +29,7 @@ pnpm install ja-react-table
 // Import the component
 import { Table } from 'ja-react-table';
 
-// Import CSS
+// Import CSS (tailwind)
 import '../node_modules/ja-react-table/dist/style.css';
 
 // Some data
@@ -88,18 +97,17 @@ pnpm install
 
 ![ja-react-table coverage](coverage.png)
 
-**Manual tests in the browser**
+**Manual tests in the browser** and open the browser at this address : http://localhost:5173/
 
 ```sh
 npm run dev
 ```
 
-And open the browser at this address : http://localhost:5173/
-
 **With integration tests**
 
 ```sh
 npm run test
+npm run coverage
 ```
 
 ## 👤 Author

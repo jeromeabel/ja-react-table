@@ -1,4 +1,6 @@
-# PROJECT
+# PROJECT (todo)
+
+Some notes about building this component
 
 ## Resources
 
