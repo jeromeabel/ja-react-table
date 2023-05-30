@@ -1,3 +1,13 @@
+/**
+ *
+ * @component
+ * @name InputSearch
+ * @description Represents an input field for searching/filtering data.
+ * @param {Object} props - The component props.
+ * @param {Function} props.onChange - The function called when the search term changes.
+ * @returns {JSX.Element} The rendered InputSearch component.
+ */
+
 type InputSearchProps = {
   onChange: (term: string) => void;
 };

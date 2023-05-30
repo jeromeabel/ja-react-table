@@ -1,3 +1,14 @@
+/**
+ *
+ * @component
+ * @name Error
+ * @description Represents an error or warning message component.
+ * @param {Object} props - The component props.
+ * @param {string} props.message - The error or warning message to be displayed.
+ * @param {string} [props.type='error'] - The type of the error or warning (default: 'error').
+ * @returns {JSX.Element} The rendered Error component.
+ */
+
 const Error = ({
   message,
   type = 'error',
