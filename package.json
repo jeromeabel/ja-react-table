@@ -1,13 +1,18 @@
 {
   "name": "ja-react-table",
-  "private": true,
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A React Table component with sorting, searching, pagination, and error handling functionalities",
   "author": "Jérôme Abel",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "./dist/ja-react-table.umd.cjs",
+  "module": "./dist/ja-react-table.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ja-react-table.js",
+      "require": "./dist/ja-react-table.umd.cjs"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jeromeabel/ja-react-table.git"
@@ -35,6 +40,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "@types/node": "^20.2.5",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-test-renderer": "^18.0.0",
@@ -57,6 +63,7 @@
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
+    "vite-plugin-dts": "^2.3.0",
     "vitest": "^0.31.1"
   }
 }

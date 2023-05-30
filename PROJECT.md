@@ -4,6 +4,7 @@
 
 - https://tomsouthall.com/blog/publishing-react-component-using-vite
 - Vitest: https://gist.github.com/jeromeabel/895454fe49ac009bd4fd65991b1efeb2
+  https://onderonur.netlify.app/blog/creating-a-typescript-library-with-vite/
 
 ## Steps
 

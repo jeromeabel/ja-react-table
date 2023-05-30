@@ -3,7 +3,7 @@ import { UserType, headers, users } from './mock/data';
 const App = () => {
   return (
     <main className="container mx-auto my-8">
-      <h1 className="text-3xl">Test ja-react-table component</h1>
+      <h1 className="text-3xl my-8">Test ja-react-table component</h1>
       <Table<UserType> headers={headers} items={users} sortBy="dateOfBirth" />
     </main>
   );
