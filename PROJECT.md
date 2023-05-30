@@ -61,6 +61,9 @@ why in this code, we extend the TItem just once ? Why we don't extend it in ever
 By extending TItem in the component definition (<TItem extends ItemRecord>),
 allows the type inference and usage of TItem to be consistent and predictable throughout the component's implementation.
 
+TEST OPTION
+https://cathalmacdonnacha.com/how-to-test-a-select-element-with-react-testing-library
+
 ## Publish
 
 - npm run build

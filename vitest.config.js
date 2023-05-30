@@ -10,4 +10,13 @@ export default defineConfig({
     setupFiles: ['./vitest.setup.js'],
     // css : true, // parsing CSS is slow
   },
+  build: {
+    lib: {
+      entry: 'src/index.ts',
+      name: 'ja-react-table',
+      fileName: 'index',
+      formats: ['es', 'cjs'],
+    },
+    outDir: 'dist',
+  },
 });

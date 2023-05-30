@@ -1,9 +1,17 @@
 {
   "name": "ja-react-table",
   "private": true,
+  "type": "module",
   "version": "0.0.1",
-  "description": "A React Table component",
+  "description": "A React Table component with sorting, searching, pagination, and error handling functionalities",
   "author": "Jérôme Abel",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeromeabel/ja-react-table.git"
+  },
   "keywords": [
     "react",
     "typescript",
@@ -13,7 +21,6 @@
     "dist",
     "README.md"
   ],
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -35,6 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^4.0.0",
+    "@vitest/coverage-c8": "^0.31.1",
     "autoprefixer": "^10.4.14",
     "c8": "^7.13.0",
     "eslint": "^8.38.0",
@@ -50,39 +58,5 @@
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vitest": "^0.31.1"
-  },
-  "main": "./dist/ja-react-table.umd.js",
-  "module": "./dist/ja-react-table.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/ja-react-table.es.js",
-      "require": "./dist/ja-react-table.umd.js"
-    }
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true,
-      "es2020": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended"
-    ],
-    "parserOptions": {
-      "sourceType": "module"
-    }
   }
 }
