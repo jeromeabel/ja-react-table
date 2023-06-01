@@ -183,8 +183,8 @@ describe('Table component | integration tests', () => {
       const selectedOption = selectElement.options[selectElement.selectedIndex];
 
       // Assert
-      expect(screen.getAllByRole('option').length).toBe(5);
-      expect(selectedOption.textContent).toBe('5');
+      expect(screen.getAllByRole('option').length).toBe(4);
+      expect(selectedOption.textContent).toBe('10');
     });
 
     it('Should call the onChange callback with the selected length', () => {
@@ -244,9 +244,9 @@ describe('Table component | integration tests', () => {
       // Assert
       const paginationButtons = screen.getByRole('navigation');
       const buttons = paginationButtons.querySelectorAll('button');
-      // 26 items . nbEntries (5) = 6 pages
-      // + Previous/Next button = 8 buttons
-      expect(buttons.length).toBe(8);
+      // 26 items . nbEntries (10) = 3 pages
+      // + Previous/Next button = 5 buttons
+      expect(buttons.length).toBe(5);
     });
 
     describe('And when the number of entries change', () => {
@@ -293,7 +293,7 @@ describe('Table component | integration tests', () => {
 
         // Assert
         expect(
-          screen.getByText('Showing 6 to 10 of 26 entries') // Second page
+          screen.getByText('Showing 11 to 20 of 26 entries') // Second page
         ).toBeInTheDocument();
       });
     });
