@@ -1,7 +1,7 @@
 {
   "name": "ja-react-table",
   "type": "module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A React Table component with sorting, searching, pagination, and error handling functionalities",
   "author": "Jérôme Abel",
   "main": "dist/index.umd.js",
