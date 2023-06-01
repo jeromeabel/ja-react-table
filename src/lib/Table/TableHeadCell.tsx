@@ -48,7 +48,7 @@ const TableHeadCell = ({
   };
 
   return (
-    <th className="font-semibold tracking-wide text-gray-600 lg:p-2">
+    <th className="font-semibold tracking-wide text-gray-600 p-2 min-w-fit whitespace-nowrap">
       <button
         className={`hover:text-black hover:cursor-pointer  flex gap-2 items-center ${
           isActive ? ' text-black' : ''

@@ -38,7 +38,7 @@ const PaginationButtons = ({
       const isActive = i === currentPage;
       pageNumbers.push(
         <button
-          className={`p-1 lg:p-2 border hover:cursor-pointer ${
+          className={`px-4 border rounded hover:cursor-pointer hover:border-gray-600  ${
             isActive ? 'border-black' : 'border-transparent'
           }`}
           key={i}
@@ -61,8 +61,8 @@ const PaginationButtons = ({
     isDisabled: boolean
   ) => (
     <button
-      className={`py-1 px-4 lg:p-2 border ${
-        isDisabled ? 'opacity-50' : 'hover:cursor-pointer hover:border-black'
+      className={`py-2 px-4 rounded bg-gray-200 ${
+        isDisabled ? 'opacity-40 ' : 'hover:cursor-pointer hover:bg-gray-100'
       }`}
       onClick={onClick}
       disabled={isDisabled}
@@ -74,9 +74,8 @@ const PaginationButtons = ({
   // Render
   return (
     <nav
-      className="flex gap-1 lg:gap-2"
+      className="flex gap-2 flex-wrap"
       aria-label="Pagination of the table element"
-      id="olala"
     >
       {renderButton(
         'Previous',

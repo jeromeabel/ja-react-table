@@ -2,14 +2,14 @@
  * Table is a React Table component written in TypeScript
  * It displays tabular data with sorting, searching, pagination, and error handling functionalities.
  *
- * @component
+ * @module
  * @param {Array} headers - An array of header objects defining the columns of the table.
  * @param {Array} items - An array of item objects representing the data rows of the table.
  * @param {string} [sortBy] - The key to sort the items by initially.
  * @returns {JSX.Element} The rendered Table component.
  *
- * Usage
- * <Table<ItemType> headers={headers} items={items} sortBy="dateOfBirth" />
+ * @example
+ * `<Table<ItemType> headers={headers} items={items} sortBy="dateOfBirth" />`
  *
  * Types:
  * The component uses generic has types for items of the array
@@ -49,7 +49,7 @@ const Table = <TItem extends ItemRecord>({
 }: TableProps<TItem>) => {
   // States to handle all features : sorting, search and pagination
   const [searchTerm, setSearchTerm] = useState('');
-  const [entriesPerPage, setEntriesPerPage] = useState(5);
+  const [entriesPerPage, setEntriesPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
   const [sortKey, setSortKey] = useState(sortBy);
   const [sortOrder, setSortOrder] = useState<SortOrderType>('asc');
@@ -157,11 +157,11 @@ const Table = <TItem extends ItemRecord>({
   // Rendering section
   return (
     <div className="flex flex-col gap-4 lg:gap-8 w-full">
-      <div className="flex justify-between">
+      <div className="flex flex-col gap-4 lg:flex-row justify-between">
         <InputEntries onChange={handleEntries} />
         <InputSearch onChange={handleSearch} />
       </div>
-      <div className="border shadow-lg p-0 lg:p-2 overflow-auto">
+      <div className="border shadow-lg rounded p-0 lg:p-2 overflow-auto">
         {!hasItems ? (
           <Error type="error" message="No items available." />
         ) : !hasFilteredItems ? (
@@ -173,7 +173,7 @@ const Table = <TItem extends ItemRecord>({
           </table>
         )}
       </div>
-      <div className="flex justify-between">
+      <div className="flex flex-col gap-4 lg:flex-row justify-between">
         <div>
           Showing {startEntry} to {paginatedItems.endEntry} of{' '}
           {paginatedItems.totalEntries} entries

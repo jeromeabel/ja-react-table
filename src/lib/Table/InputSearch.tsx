@@ -27,7 +27,7 @@ const InputSearch = ({ onChange }: InputSearchProps) => {
         Search:
       </label>
       <input
-        className="p-2 border"
+        className="p-2 border rounded"
         id="searchInput"
         type="text"
         placeholder="..."

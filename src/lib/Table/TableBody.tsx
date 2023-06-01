@@ -37,7 +37,7 @@ const TableBody = <TItem extends ItemRecord>({
         return (
           <tr key={index} className="even:bg-slate-50">
             {Object.keys(item).map((property, index) => (
-              <td key={index} className="lg:p-2">
+              <td key={index} className="p-2 whitespace-nowrap">
                 {renderCellProperty(item[property])}
               </td>
             ))}

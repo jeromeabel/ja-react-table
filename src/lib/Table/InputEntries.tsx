@@ -32,7 +32,6 @@ const InputEntries = ({ onChange }: InputEntriesProps) => {
         id="entriesSelect"
         onChange={handleChange}
       >
-        <option>5</option>
         <option>10</option>
         <option>25</option>
         <option>50</option>
