@@ -4,10 +4,11 @@ This project is the n°14 of the [OpenClassrooms Front-End learning path](https:
 
 The goal is to create a React component and publish it as a NPM package.
 
-I've chose to build a React Table component written in TypeScript. It displays tabular data with sorting, searching, pagination, and error handling functionalities.
+I've built a React Table component written in TypeScript. It displays tabular data with sorting, searching, pagination, and error handling functionalities.
+
+**Example**:
 
 ```tsx
-// Basic usage
 <Table<ItemType> headers={headers} items={items} sortBy="dateOfBirth" />
 ```
 
@@ -43,7 +44,7 @@ type UserType = {
   dateOfBirth: Date;
 };
 
-const users = [
+const users: UserType[] = [
   {
     firstName: 'John',
     dateOfBirth: new Date('1980-01-01'),

@@ -10,7 +10,7 @@ export type UserType = {
   dateOfBirth: Date;
 };
 
-export const users = [
+export const users: UserType[] = [
   {
     firstName: 'John',
     lastName: 'Doe',
