@@ -31,7 +31,7 @@ pnpm install ja-react-table
 import { Table } from 'ja-react-table';
 
 // Import CSS (tailwind)
-import '../node_modules/ja-react-table/dist/style.css';
+import 'ja-react-table/dist/style.css';
 
 // Some data
 const headers = [
